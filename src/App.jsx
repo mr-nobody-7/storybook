@@ -1,14 +1,16 @@
-import './App.css'
-import Task from './components/Task'
-import TaskStories from './components/Task.stories'
+
+
+import './index.css';
+import store from './lib/store';
+
+import { Provider } from 'react-redux';
+import InboxScreen from './components/InboxScreen';
 
 function App() {
-
-  return (
-    <div className="App">
-      <TaskStories />
-    </div>
-  )
+ return (
+  <Provider store={store}>
+    <InboxScreen />
+  </Provider>
+ );
 }
-
-export default App
+export default App;
